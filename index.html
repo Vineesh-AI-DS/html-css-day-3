@@ -6,284 +6,292 @@
     <title>Dribbble Gallery</title>
     <style>
         body {
-    background-color: #e9ebee;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+            background-color: #e9ebee;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Added box-sizing for better control */
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #444;
-    color: #fff;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+            color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+        }
 
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    transition: color 0.3s; /* Added transition */
-}
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            transition: color 0.3s; /* Added transition */
+        }
 
-header .logo:hover {
-    color: #ff4081; /* Logo hover color */
-}
+        header .logo:hover {
+            color: #ff4081; /* Logo hover color */
+        }
 
-header nav {
-    display: flex;
-    gap: 1rem;
-}
+        header nav {
+            display: flex;
+            gap: 1rem;
+        }
 
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-}
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+        }
 
-header nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-    color: #ff4081; /* Text color on hover */
-}
+        header nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+            color: #ff4081; /* Text color on hover */
+        }
 
-header .user-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+        header .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-header .user-actions input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s; /* Smooth border color transition */
-}
+        header .user-actions input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s; /* Smooth border color transition */
+        }
 
-header .user-actions input:focus {
-    border-color: #ff4081; /* Border color on focus */
-}
+        header .user-actions input:focus {
+            border-color: #ff4081; /* Border color on focus */
+        }
 
-header .user-actions a {
-    padding: 0.5rem 1rem;
-    background-color: #ff4081;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
-}
+        header .user-actions a {
+            padding: 0.5rem 1rem;
+            background-color: #ff4081;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
 
-header .user-actions a.sign-in {
-    background-color: #444;
-}
+        header .user-actions a.sign-in {
+            background-color: #444;
+        }
 
-header .user-actions a:hover {
-    background-color: #e73370;
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
+        header .user-actions a:hover {
+            background-color: #e73370;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
 
-.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 8px; /* Added rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
-}
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            background-color: #fff;
+            margin-bottom: 1rem;
+            border-radius: 8px; /* Added rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+        }
 
-.intro h1 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-    color: #333; /* Improved text color */
-    transition: color 0.3s; /* Smooth transition */
-}
+        .intro h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #333; /* Improved text color */
+            transition: color 0.3s; /* Smooth transition */
+        }
 
-.intro h1:hover {
-    color: #ff4081; /* Header hover color */
-}
+        .intro h1:hover {
+            color: #ff4081; /* Header hover color */
+        }
 
-.intro .buttons {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    width: 100%;
-}
+        .intro .buttons {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            width: 100%;
+        }
 
-.intro a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #ff4081;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-}
+        .intro a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #ff4081;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        }
 
-.intro a:hover {
-    background-color: #e73370;
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
+        .intro a:hover {
+            background-color: #e73370;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
 
-.dropdown-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
+        .dropdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-.dropdown-container select {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s, border-color 0.3s;
-}
+        .dropdown-container select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
 
-.dropdown-container select:hover {
-    background-color: #f5f5f5;
-    border-color: #ff4081;
-}
+        .dropdown-container select:hover {
+            background-color: #f5f5f5;
+            border-color: #ff4081;
+        }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.card {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        .card {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
+        .card img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px;
+            transition: opacity 0.3s, transform 0.3s; /* Smooth transitions */
+        }
 
-.card img {
-    width: 100%;
-    border-radius: 5px;
-    transition: opacity 0.3s, transform 0.3s; /* Smooth transitions */
-}
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
 
-.card img:hover {
-    opacity: 0.8;
-    transform: scale(1.03); /* Slight zoom effect */
-}
+        .card img:hover {
+            opacity: 0.8;
+            transform: scale(1.03); /* Slight zoom effect */
+        }
 
-.card-details {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
-    width: 100%;
-}
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+            width: 100%;
+        }
 
-.detail-item {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
 
-.card-details i {
-    color: #ff4081;
-    transition: color 0.3s;
-}
+        .card-details i {
+            color: #ff4081;
+            transition: color 0.3s;
+        }
 
-.card-details i:hover {
-    color: #e73370;
-}
+        .card-details i:hover {
+            color: #e73370;
+        }
 
-.card-details span {
-    font-size: 0.9rem;
-    color: #555;
-}
+        .card-details span {
+            font-size: 0.9rem;
+            color: #555;
+        }
 
-.card .author {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
+        .card .author {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .intro h1 {
-        font-size: 1rem;
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .intro h1 {
+                font-size: 1rem;
+            }
 
-    .intro a {
-        padding: 0.4rem 0.8rem;
-    }
+            .intro a {
+                padding: 0.4rem 0.8rem;
+            }
 
-    .card-details span {
-        font-size: 0.8rem;
-    }
+            .card-details span {
+                font-size: 0.8rem;
+            }
 
-    .card .author {
-        font-size: 0.9rem;
-    }
-}
+            .card .author {
+                font-size: 0.9rem;
+            }
 
-@media (max-width: 480px) {
-    .header .logo {
-        font-size: 1.2rem;
-    }
+            header nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
 
-    header nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+            .user-actions {
+                flex-direction: column;
+            }
 
-    header .user-actions {
-        flex-direction: column;
-    }
+            .dropdown-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
 
-    .intro {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        @media (max-width: 480px) {
+            header .logo {
+                font-size: 1.2rem;
+            }
 
-    .intro h1 {
-        font-size: 0.9rem;
-    }
+            .intro {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    .intro .buttons {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        gap: 0.5rem;
-    }
+            .intro h1 {
+                font-size: 0.9rem;
+            }
 
-    .intro a {
-        padding: 0.3rem 0.6rem;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-    }
+            .intro .buttons {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                gap: 0.5rem;
+            }
 
-    .dropdown-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-}    
+            .intro a {
+                padding: 0.3rem 0.6rem;
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
     </style>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -306,7 +314,7 @@ header .user-actions a:hover {
     </header>
     <main>
         <div class="intro">
-            <h1>What are you working on? Dribbble is show and tell for designers.</h1>
+            <h1>What are you working on? Dribbble is show and tell fordesigners.</h1>
             <div class="buttons">
                 <a href="#" class="learn-more">Learn more</a>
                 <a href="#" class="sign-up">Sign up</a>
@@ -512,5 +520,4 @@ header .user-actions a:hover {
                 </div>
                 <div class="author">Ereh</div>
                     </div>
-        </section>
-        
+        </section>
